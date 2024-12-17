@@ -1,7 +1,7 @@
 # Data source to fetch the IAM Server Certificate
 data "aws_iam_server_certificate" "server_certificate" {
- // name_prefix = var.cert_name_prefix
-  latest      = var.latest_cert
+  // name_prefix = var.cert_name_prefix
+  latest = var.latest_cert
 }
 
 # Resource to create an Elastic Load Balancer (ELB)

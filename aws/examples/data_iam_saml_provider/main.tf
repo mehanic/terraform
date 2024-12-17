@@ -8,7 +8,7 @@ provider "aws" {
 }
 
 module "data_iam_saml_provider" {
-  source    = "../../modules/data_iam_saml_provider"
+  source            = "../../modules/data_iam_saml_provider"
   aws_region        = "us-east-1"
   saml_provider_arn = "arn:aws:iam::123456789012:saml-provider/myprovider"
 
