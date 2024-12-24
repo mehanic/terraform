@@ -1,12 +1,3 @@
-terraform {
-  required_version = "1.10.0"
-}
-
-provider "aws" {
-  region  = "us-east-1"
-  profile = "default"
-}
-
 module "iam_instance_profile" {
   source    = "../../modules/iam_instance_profile"
   role_name = "my_custom_role"

@@ -1,12 +1,3 @@
-terraform {
-  required_version = "1.10.0"
-}
-
-provider "aws" {
-  region  = "us-east-1"
-  profile = "default"
-}
-
 module "data_iam_saml_provider" {
   source            = "../../modules/data_iam_saml_provider"
   aws_region        = "us-east-1"

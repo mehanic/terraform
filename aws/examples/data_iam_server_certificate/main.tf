@@ -1,12 +1,3 @@
-terraform {
-  required_version = "1.10.0"
-}
-
-provider "aws" {
-  region  = "us-east-1"
-  profile = "default"
-}
-
 module "data_iam_server_certificate" {
   source             = "../../modules/data_iam_server_certificate"
   cert_name_prefix   = "my-domain.org"

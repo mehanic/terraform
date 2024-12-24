@@ -1,12 +1,3 @@
-terraform {
-  required_version = "1.10.0"
-}
-
-provider "aws" {
-  region  = "us-east-1"
-  profile = "default"
-}
-
 module "iam_provider" {
   source = "../../modules/iam_provider"
   //saml_metadata_file = file("${path.module}/saml/saml-metadata.xml")

@@ -1,12 +1,3 @@
-terraform {
-  required_version = "1.10.0"
-}
-
-provider "aws" {
-  region  = "us-east-1"
-  profile = "default"
-}
-
 module "iam_signing_certificate" {
   source = "../../modules/iam_signing_certificate"
   # IAM User Name
