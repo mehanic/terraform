@@ -2,7 +2,7 @@
 #   provisioner "local-exec" {
 #     command = <<EOT
 #       cd ../../examples/lambda_alias/my-python-lambda
-      
+
 #     EOT
 #   }
 

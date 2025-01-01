@@ -1,13 +1,13 @@
 
 resource "aws_s3_bucket" "example" {
-  bucket = var.bucket_name  # Use the bucket name defined in variables
+  bucket = var.bucket_name # Use the bucket name defined in variables
 
   tags = {
     Name        = var.bucket_name
     Environment = var.environment
   }
 
-  force_destroy      = var.force_destroy
+  force_destroy       = var.force_destroy
   object_lock_enabled = var.object_lock_enabled
 }
 

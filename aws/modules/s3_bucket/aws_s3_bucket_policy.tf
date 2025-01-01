@@ -50,7 +50,7 @@ data "aws_iam_policy_document" "allow_access_from_another_account" {
 # Define the policy document for replication assume role
 data "aws_iam_policy_document" "replication_assume_role_policy" {
   statement {
-    actions   = ["sts:AssumeRole"]
+    actions = ["sts:AssumeRole"]
     principals {
       type        = "Service"
       identifiers = ["s3.amazonaws.com"]

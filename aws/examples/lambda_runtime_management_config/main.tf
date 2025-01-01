@@ -1,15 +1,15 @@
 module "lambda_runtime_management_config" {
-  source = "../../modules/lambda_runtime_management_config"
-  function_name          = "example-lambda-function"
-lambda_execution_role  = "arn:aws:iam::476167141852:role/my-lambda-role"
-lambda_zip_path        = "lambda_function.zip"
-runtime  = "provided.al2023"
-update_runtime_on      = "FunctionUpdate"
-//runtime_version_arn    = "arn:aws:lambda:us-east-1::runtime:provided.al2023"
-environment_variables  = {
-  "KEY1" = "value1"
-  "KEY2" = "value2"
-}
+  source                = "../../modules/lambda_runtime_management_config"
+  function_name         = "example-lambda-function"
+  lambda_execution_role = "arn:aws:iam::476167141852:role/my-lambda-role"
+  lambda_zip_path       = "lambda_function.zip"
+  runtime               = "provided.al2023"
+  update_runtime_on     = "FunctionUpdate"
+  //runtime_version_arn    = "arn:aws:lambda:us-east-1::runtime:provided.al2023"
+  environment_variables = {
+    "KEY1" = "value1"
+    "KEY2" = "value2"
+  }
 }
 
 

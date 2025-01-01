@@ -76,8 +76,8 @@ resource "aws_iam_role_policy" "lambda_execution_policy" {
     Statement = [
       {
         Action = [
-          "logs:*",  # Full CloudWatch Logs permissions
-          "lambda:InvokeFunction"  # Permission to invoke Lambda function
+          "logs:*",               # Full CloudWatch Logs permissions
+          "lambda:InvokeFunction" # Permission to invoke Lambda function
         ],
         Effect = "Allow",
         Resource = [
@@ -92,7 +92,7 @@ resource "aws_iam_role_policy" "lambda_execution_policy" {
 
 # CloudWatch Log Groups
 resource "aws_cloudwatch_log_group" "custom_logs" {
-  name = "/custom/logs/processor"
+  name              = "/custom/logs/processor"
   retention_in_days = 14
 }
 
@@ -103,12 +103,12 @@ resource "aws_sns_topic" "sns_topic" {
 
 # Lambda Function
 resource "aws_lambda_function" "log_processor_lambda" {
-  filename         = "../../examples/lambda_permission/log_processor_lambda/log_processor_lambda.zip"
-  function_name    = "log_processor_lambda"
-  role             = aws_iam_role.lambda_execution_role.arn
-  handler          = "log_processor.handler"
-  runtime          = "python3.9"
-  publish          = true
+  filename      = "../../examples/lambda_permission/log_processor_lambda/log_processor_lambda.zip"
+  function_name = "log_processor_lambda"
+  role          = aws_iam_role.lambda_execution_role.arn
+  handler       = "log_processor.handler"
+  runtime       = "python3.9"
+  publish       = true
 }
 
 # # Lambda Permissions

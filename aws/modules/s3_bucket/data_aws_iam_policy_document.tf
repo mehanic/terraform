@@ -22,7 +22,7 @@ data "aws_iam_policy_document" "topic" {
 # Attach the IAM Policies to SNS and SQS Resources
 resource "aws_sns_topic" "topic_with_policy" {
   //arn     = aws_sns_topic.topic.arn
-  policy  = data.aws_iam_policy_document.topic.json
+  policy = data.aws_iam_policy_document.topic.json
 }
 
 
@@ -50,7 +50,7 @@ data "aws_iam_policy_document" "queue" {
 
 resource "aws_sqs_queue" "queue_with_policy" {
   //arn     = aws_sqs_queue.queue.arn
-  policy  = data.aws_iam_policy_document.queue.json
+  policy = data.aws_iam_policy_document.queue.json
 }
 
 # # S3 Event Types

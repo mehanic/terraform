@@ -176,13 +176,13 @@ variable "metric_name" {
   default     = "ImportantBlueDocuments"
 }
 
-variable object_lock_mode {
+variable "object_lock_mode" {
   type        = string
   default     = "COMPLIANCE"
   description = "description"
 }
 
-variable retention_days {
+variable "retention_days" {
   type        = number
   default     = "5"
   description = "description"
@@ -216,7 +216,7 @@ variable "allowed_account_ids" {
 variable "destination_bucket_name" {
   description = "The name of the destination S3 bucket for replication"
   type        = string
-  default = "destination-bucket-name-destination-bucket-name"
+  default     = "destination-bucket-name-destination-bucket-name"
 }
 
 

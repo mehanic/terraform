@@ -1,13 +1,13 @@
 variable "lambda_zip_file" {
   description = "Path to the Lambda function ZIP file"
   type        = string
-  default = ""
+  default     = ""
 }
 
 variable "lambda_function_name" {
   description = "Name of the Lambda function"
   type        = string
-  default = "example-lambda-function"
+  default     = "example-lambda-function"
 }
 
 variable "lambda_execution_role" {
@@ -45,7 +45,7 @@ variable "lambda_function_version" {
 variable "additional_version_weights" {
   description = "Map defining the proportion of events sent to different versions of the Lambda function"
   type        = map(number)
-  default     = {
+  default = {
     "2" = 0.5
   }
 }

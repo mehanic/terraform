@@ -6,7 +6,7 @@ variable "function_name" {
 variable "runtime" {
   description = "The runtime environment for the Lambda function."
   type        = string
-  default     = "go1.x"  # Default runtime for Go
+  default     = "go1.x" # Default runtime for Go
 }
 
 variable "lambda_execution_role" {
@@ -17,7 +17,7 @@ variable "lambda_execution_role" {
 variable "lambda_handler" {
   description = "The function handler in your Lambda code."
   type        = string
-  default     = "main"  # Go function handler
+  default     = "main" # Go function handler
 }
 
 variable "lambda_zip_path" {

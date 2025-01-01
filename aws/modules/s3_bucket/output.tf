@@ -42,7 +42,7 @@ output "filtered_analytics_name" {
 
 output "cors_configuration" {
   description = "The CORS configuration rules applied to the bucket"
-  value = aws_s3_bucket_cors_configuration.example.cors_rule
+  value       = aws_s3_bucket_cors_configuration.example.cors_rule
 }
 
 output "intelligent_tiering_entire_bucket" {
@@ -153,12 +153,12 @@ output "delete_marker_replication_status" {
 //--
 
 output "sns_topic_arn" {
-  value = aws_sns_topic.topic.arn
+  value       = aws_sns_topic.topic.arn
   description = "ARN of the SNS topic for S3 notifications."
 }
 
 output "sns_topic_name" {
-  value = aws_sns_topic.topic.name
+  value       = aws_sns_topic.topic.name
   description = "Name of the SNS topic for S3 notifications."
 }
 

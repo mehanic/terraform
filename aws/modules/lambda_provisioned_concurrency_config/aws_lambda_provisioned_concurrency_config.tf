@@ -1,12 +1,12 @@
 resource "aws_lambda_function" "example" {
-  filename         = var.lambda_zip_file
-  function_name    = var.lambda_function_name
+  filename      = var.lambda_zip_file
+  function_name = var.lambda_function_name
   //role             = var.lambda_execution_role
-role          = aws_iam_role.lambda_execution_role.arn
-  handler          = var.lambda_handler
-  runtime          = var.lambda_runtime
- // source_code_hash = filebase64sha256(var.lambda_zip_file)
-  publish          = true
+  role    = aws_iam_role.lambda_execution_role.arn
+  handler = var.lambda_handler
+  runtime = var.lambda_runtime
+  // source_code_hash = filebase64sha256(var.lambda_zip_file)
+  publish = true
 }
 
 

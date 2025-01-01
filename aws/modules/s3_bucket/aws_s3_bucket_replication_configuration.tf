@@ -19,7 +19,7 @@ resource "aws_s3_bucket_replication_configuration" "replication" {
       storage_class = "STANDARD"
     }
     delete_marker_replication {
-      status = "Disabled"  # Can be 'Disabled' or 'Enabled' based on your requirement
+      status = "Disabled" # Can be 'Disabled' or 'Enabled' based on your requirement
     }
   }
 }

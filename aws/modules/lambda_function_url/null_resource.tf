@@ -23,7 +23,7 @@ resource "null_resource" "zip_go_lambda" {
   depends_on = [null_resource.build_go_binary]
 
   # Trigger only if the compiled binary changes
-#   triggers = {
-#     main_binary_checksum = filemd5("../../examples/lambda_function_url/my-go-lambda/main")
-#   }
+  #   triggers = {
+  #     main_binary_checksum = filemd5("../../examples/lambda_function_url/my-go-lambda/main")
+  #   }
 }

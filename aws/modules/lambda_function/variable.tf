@@ -19,7 +19,7 @@ variable "lambda_runtime" {
 variable "lambda_environment_variables" {
   description = "Environment variables for the Lambda function"
   type        = map(string)
-  default     = {
+  default = {
     foo = "bar"
   }
 }

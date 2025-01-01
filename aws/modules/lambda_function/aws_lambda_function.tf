@@ -20,7 +20,7 @@ resource "aws_lambda_function" "test_lambda" {
     security_group_ids = var.security_group_ids
   }
 
-  timeout = var.lambda_timeout
+  timeout     = var.lambda_timeout
   memory_size = var.lambda_memory_size
 
   depends_on = [
@@ -37,14 +37,14 @@ resource "aws_lambda_function_url" "test_live" {
   qualifier          = var.lambda_qualifier
   authorization_type = "AWS_IAM"
 
-#   cors {
-#     allow_credentials = var.cors_allow_credentials
-#     allow_origins     = var.cors_allow_origins
-#     allow_methods     = var.cors_allow_methods
-#     allow_headers     = var.cors_allow_headers
-#     expose_headers    = var.cors_expose_headers
-#     max_age           = var.cors_max_age
-#   }
+  #   cors {
+  #     allow_credentials = var.cors_allow_credentials
+  #     allow_origins     = var.cors_allow_origins
+  #     allow_methods     = var.cors_allow_methods
+  #     allow_headers     = var.cors_allow_headers
+  #     expose_headers    = var.cors_expose_headers
+  #     max_age           = var.cors_max_age
+  #   }
 }
 
 
